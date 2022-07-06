@@ -3,6 +3,7 @@ import Bouton from '../Bouton/Bouton'
 import './Header.scss'
 
 export default function Header() {
+    
     return (
         <header>
             <div className="conteneur-gauche">
@@ -15,10 +16,12 @@ export default function Header() {
                 </ul>
             </div>
             <div className="conteneur-droite">
-                <Bouton></Bouton>
-                <Bouton></Bouton>
+                <Bouton lien="connexion" icone="user-lock">Connexion</Bouton>
+                <Bouton lien="inscription" icone="user-plus">Inscription</Bouton>
             </div>
 
         </header>
     )
 }
+
+
