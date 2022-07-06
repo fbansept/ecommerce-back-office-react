@@ -9,14 +9,14 @@ export default function Bouton({ children, lien, icone, onClick, desactive }) {
 
   if (lien) {
     return (
-      <a {... !desactive ? {href:lien} : {}} onClick={onClick} className={(desactive ? 'desactive' : '')}>
+      <a {... !desactive ? { href: lien } : {}} onClick={onClick} className={"Button" + (desactive ? 'desactive' : '')}>
         {contenu}
       </a>
     )
   } else {
 
     return (
-      <button disabled={desactive} onClick={onClick} className={(desactive ? 'desactive' : '')} >
+      <button disabled={desactive} onClick={onClick} className={"Button" + (desactive ? 'desactive' : '')} >
         {contenu}
       </button>
     )

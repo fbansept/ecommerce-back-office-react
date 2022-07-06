@@ -1,22 +1,25 @@
 button, a {
-    padding: 1em;
-    margin: 0 0.5em;
-    border-radius: 10%;
-    border: none;
-    background-color: #FF9503;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 13px;
 
-    &:hover {
-        background-color: #C77300;
-    }
-    
-    &.desactive{
-        background-color: #EEE;
-        color: black;
-        cursor: default;
+    &.Button {
+        padding: 1em;
+        margin: 0 0.5em;
+        border-radius: 10%;
+        border: none;
+        background-color: #FF9503;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 13px;
+
+        &:hover {
+            background-color: #C77300;
+        }
+        
+        &.desactive{
+            background-color: #EEE;
+            color: black;
+            cursor: default;
+        }
     }
 }
 
