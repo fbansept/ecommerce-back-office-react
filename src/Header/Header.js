@@ -2,18 +2,18 @@ import React from 'react'
 import Bouton from '../Bouton/Bouton'
 import './Header.scss'
 import { Link } from 'react-router-dom'
+import { menu } from '../menu'
 
 export default function Header({ utilisateurConnecte, setUtilisateurConnecte }) {
-    
+
     return (
         <header>
             <div className="conteneur-gauche">
                 <img className="logo" src={process.env.PUBLIC_URL + "/logo.png"} />
                 <nav className="menu">
-                    <Link to="/dashboard">Dashboard</Link>
-                    <Link to="/utilisateurs">Utilisateurs</Link>
-                    <Link to="/produits">Produits</Link>
-                    <Link to="/categories">Catégories</Link>
+                    {menu.map((element) => (
+                        <Link key={element.lien} to={element.lien}>{element.titre}</Link>
+                    ))}
                 </nav>
             </div>
             <div className="conteneur-droite">
@@ -23,7 +23,7 @@ export default function Header({ utilisateurConnecte, setUtilisateurConnecte }) 
                         <Bouton lien="deconnexion" icone="user-plus">Se déconnecter</Bouton>
                     </>
                 :   <>
-                        <Bouton onClick={onClickConnexion} lien="connexion" icone="user-lock">Connexion</Bouton>
+                        <Bouton onClick={onClickConnexion} icone="user-lock">Connexion</Bouton>
                         <Bouton lien="inscription" icone="user-plus">Inscription</Bouton>
                     </>
                 }
