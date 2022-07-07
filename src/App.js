@@ -11,29 +11,6 @@ import Page404 from './pages/Page404/Page404';
 
 function App() {
 
-  // const listeSousMenu = {
-  //   dashboard : [
-  //     { titre: "Chiffre d'affaire", icone: "circle-dollar" },
-  //     { titre: "Stock", icone: "shelves" },
-  //     { titre: "Commandes", icone: "boxes-packing" }
-  //   ],
-  //   utilisateurs: [
-  //     { titre: "Gérer les utilisateurs", icone: "users" },
-  //     { titre: "Exporter la liste", icone: "file-export" },
-  //     { titre: "Importer la liste", icone: "file-import" }
-  //   ],
-  //   produits: [
-  //     { titre: "Gérer les produits", icone: "shelves" },
-  //     { titre: "Exporter la liste", icone: "file-export" },
-  //     { titre: "Importer la liste", icone: "file-import" }
-  //   ], 
-  //   categories: [
-  //     { titre: "Gérer les categories", icone: "folder-tree" },
-  //     { titre: "Exporter la liste", icone: "file-export" },
-  //     { titre: "Importer la liste", icone: "file-import" }
-  //   ]
-  // }
-
   const [utilisateurConnecte, setUtilisateurConnecte] = useState(null);
   
   return (
@@ -45,7 +22,7 @@ function App() {
         <SideMenu></SideMenu>
         <div className='content'>
             <Routes>
-              <Route path="/" element={<Dashboard />} />
+              <Route path="/" element={<Navigate replace to="/dashboard" />}/>
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/utilisateurs" element={<Utilisateurs />} />
               <Route path="/produits" element={<Produits />} />
